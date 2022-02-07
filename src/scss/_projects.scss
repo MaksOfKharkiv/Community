@@ -1,0 +1,185 @@
+.projects {
+    padding: 52px 0;
+
+    &__header {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 70px;
+
+        &-textbox {
+            max-width: 670px;
+        }
+
+        &-title {
+            font-size: 29px;
+            margin-bottom: 30px;
+        }
+
+        &-text {
+            font-size: 17px;
+            color: rgb(143, 143, 143);
+            line-height: 2;
+        }
+
+        &-button {
+            text-align: center;
+            border: 1px solid rgba($darkgrey, 0.7);
+            border-radius: 9px;
+            min-width: 185px;
+            padding: 18px 0;
+            background: transparent;
+            transition: .3s;
+
+            a {
+                font-size: 17px;
+                font-weight: 600;
+                color: rgba($darkgrey, 0.7);
+            }
+
+            &:hover {
+                background: $lime;
+                border-color: $lime;
+                
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &__container {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        width: 300px;
+        border: 1px solid rgba($black, .1);
+        border-radius: 7px;
+        overflow: hidden;
+        background: #f9f9f9;
+        margin: 0 15px 15px;
+
+        &-image {
+            height: 229px;
+            position: relative;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+
+        &-label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 89px 89px 0 0;
+            border-color: $lime transparent transparent transparent;
+
+            .label {
+                position: absolute;
+                display: block;
+                top: -65px;
+                left: 10px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 600;
+                color: $white;
+                transform: rotate(-45deg);
+            }
+        }
+
+        &-price {
+            position: absolute;
+            right: 15px;
+            bottom: 18px;
+            background: #26a6d1;
+            color: $white;
+            min-width: 140px;
+            font-size: 16px;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 5px;
+        }
+
+        &-container {
+            padding: 30px 25px;
+        }
+
+        &-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: rgb(72, 72, 72);
+        }
+
+        &-text {
+            color: rgba(72, 72, 72, 0.71);
+            line-height: 2;
+            margin: 15px 0;
+        }
+
+        &-progressbar {
+            background:rgb(227, 227, 227);
+            width: 100%;
+            height: 14px;
+            border-radius: 7px;
+            position: relative;
+            overflow: hidden;
+
+            .progress {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: $lime;
+            }
+        }
+
+        &-statusbar {
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 25px;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background: #d6d6d6;
+            }
+        }
+
+        &-funded,
+        &-timer {
+            color: $grey;
+        }
+
+        &-details {
+            text-align: right;
+            padding-right: 25px;
+            position: relative;
+
+            a {
+                color: $grey;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 8px 0 8px 12px;
+                border-color: transparent transparent transparent $lime;
+            }
+        }
+    }
+}

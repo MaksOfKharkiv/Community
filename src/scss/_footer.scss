@@ -1,0 +1,27 @@
+.footer {
+    padding: 45px 0 27px;
+
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding-bottom: 42px;
+        margin-bottom: 26px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: #ededed;
+        }
+    }
+
+    &__copyright {
+        color: rgb(132, 132, 132);
+        text-align: center;
+    }
+} 

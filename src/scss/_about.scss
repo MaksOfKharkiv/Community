@@ -1,0 +1,270 @@
+.about {
+    padding: 104px 0 52px;
+
+    @include screen(900) {
+        padding: 52px 0 26px;
+    }
+
+    &__container {
+        text-align: center;
+    }
+    
+    &__logo {
+        max-width: 58px;
+    }
+
+    &__title {
+        padding: 50px 0 70px;
+        font-weight: 600;
+        font-size: 31px;
+        line-height: 1.6;
+        text-transform: uppercase;
+        max-width: 515px;
+        margin: 0 auto;
+
+        @include screen(900) {
+            padding: 25px 0 25px;
+            font-size: 25px;
+            line-height: 1.2;
+        }
+    }
+
+    &__text {
+        font-size: 19px;
+        line-height: 2;
+        color: rgba($darkgrey, .7);
+
+        @include screen(900) {
+            font-size: 16px;
+            line-height: 1.2; 
+        }
+
+        & + .about__text {
+            margin-top: 52px;
+
+            @include screen(900) {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    &__tabs {
+        padding: 110px 21px;
+
+        @include screen(900) {
+            padding: 20px 5px;
+        }
+
+        .tabs {
+
+            &__buttons {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                border-bottom: 1px solid #e6e6e6;
+                margin-bottom: 65px;
+
+                @include screen(900) {
+                    margin-bottom: 10px;
+                    border-bottom: none;
+                }
+            }
+
+            &__button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 33px;
+                color: $darkgrey;
+                cursor: pointer;
+                padding-bottom: 35px;
+                position: relative;
+                transition: .3s;
+                width: 33.3%;
+                flex-shrink: 0;
+
+                @include screen(900) {
+                    padding-bottom: 10px;
+                    font-size: 20px;
+                }
+
+                span {
+                    display: inline-block;
+                    background: $darkgrey;
+                    border-radius: 50%;
+                    width: 43px;
+                    height: 43px;
+                    font-size: 25px;
+                    color: $white;
+                    line-height: 1.57;
+                    text-align: center;
+                    margin-right: 30px;
+                    transition: .3s;
+
+                    @include screen(900) {
+                        width: 25px;
+                        height: 25px;
+                        font-size: 15px;
+                    }
+                }
+
+                &.active {
+
+                    span {
+                        background: $lime;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background: $lime;
+                        width: 100%;
+                        height: 1px;
+
+                        @include screen(900) {
+                            content: none; 
+                        }
+                    }
+                }
+            }
+
+            &__item {
+                display: none;
+    
+                &:first-child {
+                    display: block;
+                }
+    
+                img {
+                    margin: 22px auto 0;
+                    max-width: 128px;
+                }
+
+                .row {
+                    min-height: 155px;
+                }
+
+                .col-70 {
+                    padding: 0 5px;
+                }
+            }
+
+            &__title {
+                font-size: 25px;
+                color: $lime;
+                text-align: left;
+                margin-bottom: 35px;
+            }
+
+            &__text {
+                font-size: 17px;
+                color: rgba(96, 96, 96, .67);
+                line-height: 1.7;
+                text-align: left;
+            }
+        }
+    }
+
+    .doublebox {
+
+        @include screen(900) {
+           flex-direction: column;
+
+           .col-50 {
+               width: 100%;
+           }
+        }
+    }
+
+    &__leftbox {
+        background: #e2f8ff;
+        display: flex;
+        justify-content: flex-end;
+
+        @include screen(900) {
+            justify-content: center;
+        }
+
+        .about__column {
+            padding: 0 70px 0 15px;
+            margin: 0;
+
+            @include screen(900) {
+                padding: 0 5px;
+            }
+        }
+    }
+
+    &__rightbox {
+        background: #f5f9eb;
+        display: flex;
+
+        @include screen(900) {
+            justify-content: center;
+        }
+
+        .about__column {
+            padding: 0 15px 0 70px;
+            margin: 0;
+
+            @include screen(900) {
+                padding: 0 5px;
+            }
+        }
+    }
+
+    &__leftbox,
+    &__rightbox {
+        padding: 45px 0;
+
+        .col-30 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .col-70 {
+            padding-left: 50px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 23px;
+        font-family: $font-montserrat;
+        margin-bottom: 38px;
+    }
+
+    &__description {
+        font-size: 17px;
+        text-align: left;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        width: 187px;
+        background: rgb(38, 166, 209);
+        border-radius: 8px;
+        padding: 20px 5px;
+        text-align: center;
+        transition: .3s;
+
+        a {
+            font-size: 14px;
+            font-weight: 600;
+            color: $white;
+        }
+
+        &:hover {
+            box-shadow: $buttonHover;
+        }
+    }
+
+    &__lime {
+        background: $lime;
+    }
+}
+  

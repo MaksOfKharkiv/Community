@@ -1,0 +1,119 @@
+.home {
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    position: relative;
+
+    &:after {
+        content: '';
+        background: #425948;
+        opacity: .2;
+        position: absolute;
+        inset: 0;
+    }
+
+    &__swiper {
+
+        .swiper-wrapper {
+            width: 100%;
+            padding: 255px 0 165px;
+
+            @include screen(900) {
+                padding: 120px 0 80px;
+            }
+
+            .swiper-slide {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+    &__button-prev,
+    &__button-next {
+        width: 13px;
+        height: 20px;
+        top: calc(100% - 48px);
+        
+        @include screen(900) {
+            top: calc(100% - 25px);
+            right: calc(50% - 25px);  
+        }
+
+        &:after {
+            font-size: 20px;
+            font-weight: 700;
+            color: $white;
+            transition: .3s;
+        }
+
+        &:hover {
+            
+            &:after {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__button-prev {
+        left: calc(100% - 70px);
+
+        @include screen(900) {
+            left: calc(50% - 25px); 
+        }
+    }    
+
+    &__title,
+    &__description {
+        font-weight: 600;
+        line-height: 1.565;
+        color: $white;
+        text-align: center;
+
+        h3 {
+            font-size: 46px;
+
+            @include screen(900) {
+                font-size: 30px;
+            }
+        }
+
+
+        p {
+            font-size: 35px;
+
+            @include screen(900) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__button {
+        background: $lime;
+        font-weight: 600;
+        font-size: 19px;
+        text-align: center;
+        width: 255px;
+        border:2px solid $lime;
+        border-radius: 8px;
+        padding: 29px 0;
+        margin-top: 55px;
+        transition: .5s;
+
+        @include screen(900) {
+            font-size: 14px;
+            max-width: 150px;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        a {
+            color: $white;
+        }
+
+        &:hover {
+            box-shadow: $buttonHover;
+        }
+    }
+} 

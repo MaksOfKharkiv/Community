@@ -1,0 +1,83 @@
+.blog {
+    padding: 52px 0 64px;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    &__title {
+        font-size: 39px;
+        font-weight: 600;
+        color: $lime;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    &__description {
+        font-size: 19px;
+        text-align: center;
+        color: $grey;
+        line-height: 2;
+        padding: 0 30px;
+        margin-bottom: 100px;
+    }
+
+    &__posts {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+
+        &-message {
+            max-width: 400px;
+            padding: 35px 25px;
+            background: $white;
+            border-radius: 10px;
+            margin-bottom: 35px;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -21px;
+                left: 83px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 21px 21px 0 0;
+                border-color: $white transparent transparent transparent;
+            }
+        }
+
+        &-title {
+            font-size: 21px;
+            font-weight: 600;
+            color: $lime;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        &-text {
+            color: rgb(132, 132, 132);
+            text-align: center;
+            line-height: 2;
+        }
+
+        &-client {
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        &-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        &-name {
+            font-size: 15px;
+            font-family: $font-montserrat;
+            color: rgb(73, 73, 73);
+            padding-left: 18px;
+        }
+    }
+}
